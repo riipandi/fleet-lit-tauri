@@ -1,0 +1,136 @@
+{
+    "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+    "organizeImports": {
+        "enabled": true
+    },
+    "vcs": {
+        "enabled": true,
+        "clientKind": "git",
+        "useIgnoreFile": true,
+        "defaultBranch": "main"
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": true,
+            "a11y": {
+                "noSvgWithoutTitle": "off",
+                "useKeyWithClickEvents": "off",
+                "useSemanticElements": "off",
+                "useValidAnchor": "off"
+            },
+            "complexity": {
+                "noBannedTypes": "off",
+                "noUselessFragments": "warn"
+            },
+            "correctness": {
+                "noUnusedImports": {
+                    "level": "off",
+                    "fix": "none"
+                },
+                "noUnusedVariables": {
+                    "level": "warn",
+                    "fix": "none"
+                },
+                "noChildrenProp": "off",
+                "noUnknownFunction": "off",
+                "useJsxKeyInIterable": "error"
+            },
+            "nursery": {
+                "useSortedClasses": {
+                    "level": "warn",
+                    "fix": "safe",
+                    "options": {
+                        "attributes": ["classList", "className", "style"],
+                        "functions": ["clsx", "clx", "cn", "cva", "tv", "tw"]
+                    }
+                }
+            },
+            "performance": {
+                "noReExportAll": "off"
+            },
+            "security": {
+                "noDangerouslySetInnerHtmlWithChildren": "warn",
+                "noDangerouslySetInnerHtml": "off"
+            },
+            "style": {
+                "noNonNullAssertion": "off",
+                "noParameterAssign": "warn",
+                "noUnusedTemplateLiteral": "off",
+                "useConsistentArrayType": "warn",
+                "useExportType": "warn",
+                "useImportType": {
+                    "level": "warn",
+                    "fix": "safe"
+                },
+                "useFilenamingConvention": {
+                    "level": "off",
+                    "options": {
+                        "filenameCases": ["PascalCase", "camelCase", "kebab-case"]
+                    }
+                }
+            },
+            "suspicious": {
+                "noArrayIndexKey": "warn",
+                "noAssignInExpressions": "off",
+                "noCommentText": "off",
+                "noConsoleLog": {
+                    "level": "off",
+                    "fix": "none"
+                },
+                "noDebugger": "off",
+                "noExplicitAny": "off",
+                "noConsole": {
+                    "level": "off",
+                    "fix": "none",
+                    "options": {
+                        "allow": []
+                    }
+                },
+                "noDuplicateAtImportRules": "error",
+                "noEmptyBlock": "warn"
+            }
+        }
+    },
+    "formatter": {
+        "enabled": true,
+        "formatWithErrors": false,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 100,
+        "ignore": []
+    },
+    "css": {
+        "parser": {
+            "allowWrongLineComments": false
+        },
+        "formatter": {
+            "enabled": true,
+            "quoteStyle": "double"
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "indentWidth": 2,
+            "quoteStyle": "single",
+            "jsxQuoteStyle": "double",
+            "arrowParentheses": "always",
+            "semicolons": "asNeeded",
+            "trailingCommas": "all",
+            "quoteProperties": "asNeeded",
+            "bracketSpacing": true,
+            "bracketSameLine": false
+        }
+    },
+    "json": {
+        "formatter": {
+            "indentWidth": 4,
+            "trailingCommas": "none"
+        }
+    },
+    "files": {
+        "ignoreUnknown": true,
+        "include": ["**/*.js", "**/*.ts", "**/*.css", "**/*.json", "**/*.jsonc"],
+        "ignore": [".github", ".tauri", "build", "dist", "**/*.rs", "target"]
+    }
+}

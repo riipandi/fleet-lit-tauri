@@ -1,0 +1,88 @@
+{
+    "$schema": "https://schema.tauri.app/config/2",
+    "identifier": "com.ripandis.fleet-lit-tauri",
+    "productName": "Fleet Lit Tauri",
+    "version": "0.0.0",
+    "build": {
+        "beforeDevCommand": "pnpm dev:ui",
+        "beforeBuildCommand": "pnpm build:ui",
+        "devUrl": "http://localhost:1420",
+        "frontendDist": "../.output/frontend"
+    },
+    "app": {
+        "macOSPrivateApi": true,
+        "withGlobalTauri": true,
+        "security": {
+            "pattern": {
+                "use": "brownfield"
+            },
+            "csp": null
+        },
+        "trayIcon": null,
+        "windows": []
+    },
+    "bundle": {
+        "active": true,
+        "category": "DeveloperTool",
+        "publisher": "Aris Ripandi",
+        "copyright": "Copyright © 2025 Aris Ripandi",
+        "shortDescription": "A Tauri application",
+        "longDescription": "Experimental Fleet / Trae UI built with Tauri and Lit web components",
+        "createUpdaterArtifacts": false,
+        "targets": "all",
+        "macOS": {
+            "dmg": {
+                "appPosition": {
+                    "x": 150,
+                    "y": 160
+                },
+                "applicationFolderPosition": {
+                    "x": 445,
+                    "y": 160
+                },
+                "windowSize": {
+                    "height": 355,
+                    "width": 600
+                }
+            },
+            "minimumSystemVersion": "11.0",
+            "entitlements": "Info.plist",
+            "providerShortName": null,
+            "signingIdentity": null,
+            "files": {}
+        },
+        "windows": {
+            "allowDowngrades": true,
+            "certificateThumbprint": null,
+            "digestAlgorithm": null,
+            "nsis": null,
+            "timestampUrl": null,
+            "tsp": false,
+            "webviewInstallMode": {
+                "silent": true,
+                "type": "downloadBootstrapper"
+            },
+            "wix": null
+        },
+        "resources": [],
+        "icon": [
+            "icons/32x32.png",
+            "icons/128x128.png",
+            "icons/128x128@2x.png",
+            "icons/icon.icns",
+            "icons/icon.ico"
+        ]
+    },
+    "plugins": {
+        "updater": {
+            "active": true,
+            "dialog": true,
+            "dangerousInsecureTransportProtocol": true,
+            "windows": {
+                "installMode": "passive"
+            },
+            "endpoints": ["http://localhost:3000/updates/{{target}}/{{arch}}/{{current_version}}"],
+            "pubkey": "CHANGE_ME_WITH_ACTUAL_PUBLIC_KEY_GENERATED_FROM_TAURI_SIGNER_GENERATE"
+        }
+    }
+}

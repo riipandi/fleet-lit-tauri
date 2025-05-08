@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        "biomejs.biome",
+        "darkriszty.markdown-table-prettify",
+        "EditorConfig.EditorConfig",
+        "fill-labs.dependi",
+        "foxundermoon.shell-format",
+        "runem.lit-plugin",
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "tauri-apps.tauri-vscode",
+        "vadimcn.vscode-lldb",
+        "vunguyentuan.vscode-css-variables"
+    ],
+    "unwantedRecommendations": []
+}

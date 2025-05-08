@@ -1,0 +1,80 @@
+/node_modules
+/.idea
+/.pnp
+/.husky
+.pnp.js
+.DS_Store
+.DS_Store?
+/coverage
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*tsbuildinfo
+.rollup.cache
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+*.bak
+
+# SQLite
+*.sqlite*
+*.sqlite3*
+*.libsql
+*.db
+
+# Projects
+_data/
+build/
+dist/
+.data
+.dist
+.cache
+.output
+.client
+.build
+.wrangler
+.temp
+.tmp
+
+# envars
+.env.*
+!.env.example
+compose.env*
+!compose.env.example
+
+# Disable this line in your real app
+/playwright/.cache/
+/playwright-report/
+/tests-results/
+/blob-report/
+.playwright/
+
+# Sentry Config File
+.sentryclirc
+
+# Vite & Vitest config
+vite.config.*
+!vite.config.ts
+vitest.config.*
+!vitest.config.ts
+vitest.workspace.*
+!vitest.workspace.ts
+
+# Miscellaneous
+pnpm-exec-summary.json
+slim.report.json
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate*
+terraform.tfvars*
+!terraform.tfvars.example
+
+# Tauri
+.tauri/
+target/
+src-tauri/gen/
+src/libs/bindings.ts

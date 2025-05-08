@@ -1,0 +1,34 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": false,
+    "editor.defaultFormatter": "biomejs.biome",
+    "files.exclude": {
+        "**/tmp/**": true
+    },
+    "search.exclude": {
+        "**/.output/**": true,
+        "**/.vscode/**": true,
+        "**/.temp/**": true,
+        "**/build": true,
+        "**/dist": true,
+        "**/tmp": true
+    },
+    "files.associations": {
+        "*.yaml.example": "yaml",
+        "*.yml.example": "yaml",
+        "*.css": "css",
+        "*.plist": "xml"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml",
+        "editor.formatOnSave": false
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "darkriszty.markdown-table-prettify"
+    },
+    "rust-analyzer.linkedProjects": ["./src-tauri/Cargo.toml"],
+    "rust-analyzer.showUnlinkedFileNotification": false
+}
