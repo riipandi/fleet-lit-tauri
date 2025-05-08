@@ -6,7 +6,7 @@
 [![Dependencies](https://deps.rs/repo/github/riipandi/fleet-lit-tauri/status.svg)](https://deps.rs/repo/github/riipandi/fleet-lit-tauri)
 
 > [!WARNING]
-> This project is and experimental and may not be stable.
+> This project is experimental and may not be stable.
 
 Experimental Fleet / Trae UI built with Tauri and Lit web components.
 
